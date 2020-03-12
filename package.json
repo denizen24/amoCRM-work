@@ -1,0 +1,61 @@
+{
+  "name": "@B2BFamily/al-task-worker",
+  "version": "0.0.1",
+  "description": "npm package al-task-worker",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "start:dev": "npx nodemon",
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/B2BFamily/al-task-worker.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/b2bfamily"
+  },
+  "keywords": [
+    "denizen24.ru",
+    "nmp-package",
+    "al-task-worker"
+  ],
+  "author": "denizen24.ru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/B2BFamily/al-task-worker/issues"
+  },
+  "homepage": "git://github.com/B2BFamily/al-task-worker.git#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.7",
+    "nodemon": "^1.19.4",
+    "codecov": "^3.1.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "ts-jest": "^24.2.0",
+    "ts-node": "^8.5.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "@types/moment-business": "^0.1.4",
+    "amocrm-js": "^1.0.17",
+    "moment": "^2.24.0",
+    "moment-business": "^3.0.1",
+    "pg": "^7.17.1",
+    "typeorm": "^0.2.22"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
