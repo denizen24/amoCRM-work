@@ -50,7 +50,7 @@
   "dependencies": {
     "@types/moment-business": "^0.1.4",
     "amocrm-js": "^1.0.17",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "moment-business": "^3.0.1",
     "pg": "^7.17.1",
     "typeorm": "^0.2.22"
